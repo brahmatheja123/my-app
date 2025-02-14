@@ -1,5 +1,6 @@
 "use client"
 
+import dynamic from 'next/dynamic'
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 const data = [
@@ -11,7 +12,7 @@ const data = [
   { name: "Orange", value: 3 },
 ]
 
-export function ResolvedReportsChart() {
+function Chart() {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <LineChart data={data}>
@@ -39,4 +40,8 @@ export function ResolvedReportsChart() {
       </LineChart>
     </ResponsiveContainer>
   )
-} 
+}
+
+export const ResolvedReportsChart = dynamic(() => Promise.resolve(Chart), {
+  ssr: false
+}) 
