@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../../src/components/ui/card"
-import { MonthlyReportsChart } from "../../src/components/dashboard/monthly-reports-chart"
-import { ResolvedReportsChart } from "../../src/components/dashboard/resolved-reports-chart"
-import { LatestReports } from "../../src/components/dashboard/latest-reports"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { MonthlyReportsChart } from "@/components/dashboard/monthly-reports-chart"
+import { ResolvedReportsChart } from "@/components/dashboard/resolved-reports-chart"
+import { LatestReports } from "@/components/dashboard/latest-reports"
 
 export default function DashboardPage() {
   return (
